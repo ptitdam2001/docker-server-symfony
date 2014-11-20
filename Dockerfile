@@ -27,6 +27,7 @@ RUN a2enmod rewrite
 RUN sed -i "s/short_open_tag = Off/short_open_tag = On/" /etc/php5/apache2/php.ini
 RUN sed -i "s/error_reporting = .*$/error_reporting = E_ERROR | E_WARNING | E_PARSE/" /etc/php5/apache2/php.ini
 #RUN sed -i "s/date.timezone = \"Europe/Paris\"/date.timezone = \"Europe/Paris\"/" /etc/php5/apache2/php.ini
+RUN echo 'date.timezone = "Europe/Paris"' >> /etc/php5/apache2/php.ini
 
 # Manually set up the apache environment variables
 ENV APACHE_RUN_USER www-data
