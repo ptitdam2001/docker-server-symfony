@@ -44,7 +44,7 @@ ADD apache-config.conf /etc/apache2/sites-enabled/000-default.conf
 
 #Add writing/reading rights to cache and log paths
 #RUN chown -R $APACHE_RUN_GROUP:$APACHE_RUN_USER /var/www/app/cache var/www/app/logs
-RUN chmod -R ao+rw /var/www/site/app/cache /var/www/site/app/logs
+#RUN chmod -R ao+rw /var/www/site/app/cache /var/www/site/app/logs
 
 # By default, simply start apache.
 CMD /usr/sbin/apache2ctl -D FOREGROUND
