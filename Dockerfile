@@ -9,7 +9,6 @@ RUN apt-get update && \
 	apt-get -y install curl \
 	apache2  \
 	php5 \
-	intl \
 	libapache2-mod-php5 \
 	php5-mysql \
 	php5-curl \
